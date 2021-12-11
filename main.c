@@ -9,7 +9,9 @@
  *  The measured voltage is then converted (with the conversion 0.1V = 1A) into current and power and everything is shown on the display.
  *  Finally, the measured value is output as an analogue 0 - 3.3V signal at the DAC.
  *
- *  CONNECTIONS:
+ *  THERE WAS A SPECIALLY CODE (infineon_xmc4500_power2display) DEVELOPED TO CHECK THE RIGHT FUNCTION OF THE DAC-OUTPUT
+ *
+ *  CONNECTIONS (for XMC4500):
  *  - Display
  *    GND - GND
  *    VCC - 3.3V
