@@ -1,0 +1,84 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "dac_conf.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global DAC_0_pattern
+  20              	 .section .rodata.DAC_0_pattern,"a",%progbits
+  21              	 .align 2
+  24              	DAC_0_pattern:
+  25 0000 00       	 .byte 0
+  26 0001 06       	 .byte 6
+  27 0002 0C       	 .byte 12
+  28 0003 11       	 .byte 17
+  29 0004 16       	 .byte 22
+  30 0005 1A       	 .byte 26
+  31 0006 1D       	 .byte 29
+  32 0007 1E       	 .byte 30
+  33 0008 1F       	 .byte 31
+  34              	 .global DAC_0_Channel_Config
+  35 0009 000000   	 .section .data.DAC_0_Channel_Config,"aw",%progbits
+  36              	 .align 2
+  39              	DAC_0_Channel_Config:
+  40 0000 0000     	 .space 2
+  41 0002 80       	 .byte 128
+  42 0003 00       	 .byte 0
+  43 0004 0D       	 .byte 13
+  44 0005 00       	 .byte 0
+  45 0006 0000     	 .space 2
+  46              	 .global DAC_0
+  47              	 .section .data.DAC_0,"aw",%progbits
+  48              	 .align 2
+  51              	DAC_0:
+  52 0000 00800148 	 .word 1208057856
+  53 0004 00000000 	 .word DAC_0_Channel_Config
+  54 0008 00003000 	 .word 3145728
+  55 000c 00000000 	 .word 0
+  56 0010 00       	 .byte 0
+  57 0011 000000   	 .space 3
+  58 0014 D0070000 	 .word 2000
+  59 0018 0000     	 .short 0
+  60 001a 0000     	 .short 0
+  61 001c 0000     	 .short 0
+  62 001e 0000     	 .short 0
+  63 0020 00       	 .byte 0
+  64 0021 00       	 .byte 0
+  65 0022 00       	 .byte 0
+  66 0023 00       	 .space 1
+  67 0024 00000000 	 .word DAC_0_pattern
+  68 0028 01       	 .byte 1
+  69 0029 000000   	 .space 3
+  70              	 .text
+  71              	.Letext0:
+  72              	 .file 1 "c:\\infineon\\tools\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+  73              	 .file 2 "c:\\infineon\\tools\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+  74              	 .file 3 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+  75              	 .file 4 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_dac.h"
+  76              	 .file 5 "../Dave/Generated/DAC/dac.h"
+  77              	 .file 6 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Include/cmsis_gcc.h"
+  78              	 .file 7 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Include/core_cm4.h"
+  79              	 .file 8 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
+  80              	 .file 9 "../Dave/Generated/DAC/dac_conf.c"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dac_conf.c
+    {standard input}:24     .rodata.DAC_0_pattern:00000000 DAC_0_pattern
+    {standard input}:21     .rodata.DAC_0_pattern:00000000 $d
+    {standard input}:39     .data.DAC_0_Channel_Config:00000000 DAC_0_Channel_Config
+    {standard input}:36     .data.DAC_0_Channel_Config:00000000 $d
+    {standard input}:51     .data.DAC_0:00000000 DAC_0
+    {standard input}:48     .data.DAC_0:00000000 $d
+
+NO UNDEFINED SYMBOLS
