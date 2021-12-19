@@ -53,13 +53,13 @@ void delay_ms(uint32_t ms) {
 
 //WRITE STRING ON DISPLAY
 void ssd1306_text(char *data1, char *data2, char *data3){
-	ssd1306_Fill(White);
+	ssd1306_Fill(Black);
 	ssd1306_SetCursor(2, 1);
-	ssd1306_WriteString(data1, Font_6x8, Black);
+	ssd1306_WriteString(data1, Font_6x8, White);
 	ssd1306_SetCursor(2, 12);
-	ssd1306_WriteString(data2, Font_6x8, Black);
+	ssd1306_WriteString(data2, Font_6x8, White);
 	ssd1306_SetCursor(2, 24);
-	ssd1306_WriteString(data3, Font_6x8, Black);
+	ssd1306_WriteString(data3, Font_6x8, White);
 	ssd1306_UpdateScreen();
 }
 
