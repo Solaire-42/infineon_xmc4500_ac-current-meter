@@ -68,11 +68,11 @@ void float2string(float value, char *variable, char *unit, char *str){
 	char *tmpSign = (value < 0) ? "-" : "";
 	float tmpVal = (value < 0) ? -value : value;
 
-	int tmpInt1 = tmpVal;                  	// Get the integer (678)
-	float tmpFrac = tmpVal - tmpInt1;      	// Get fraction (0.0123)
-	int tmpInt2 = trunc(tmpFrac * 100);  	// Turn into integer (123) - For changing decimal place: change 10 to 100 or 1000
+	int tmpInt1 = tmpVal;                  	// Get the integer
+	float tmpFrac = tmpVal - tmpInt1;      	// Get fraction
+	int tmpInt2 = trunc(tmpFrac * 10);  	// Turn into integer - For changing decimal place: change 10 to 100 or 1000 and in sprintf
 
-	sprintf(str, "%s %s%d.%02d %s", variable, tmpSign, tmpInt1, tmpInt2, unit);
+	sprintf(str, "%s %s%d.%01d %s", variable, tmpSign, tmpInt1, tmpInt2, unit);
 }
 
 
@@ -100,6 +100,11 @@ int main(void)
 		voltage = adc * (3.3/4096.0);
 		current = voltage * 10;
 		power = current * 230;
+		//Smoothing the measurement and compensating environmental influences
+		if(voltage <= 0.03){
+			current = 0;
+			power = 0;
+		}
 
 		//VOLTAGE STRING
 		char voltage_str [100];
