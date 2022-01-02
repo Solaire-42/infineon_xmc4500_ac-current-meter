@@ -43,7 +43,15 @@ Dave/Generated/DAVE.o Dave/Generated/DAVE.d Dave/Generated/DAVE.o: \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_ccu4.h \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_ccu4_map.h \
  ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.h \
- ../Dave/Generated/GLOBAL_CCU4/global_ccu4_extern.h
+ ../Dave/Generated/GLOBAL_CCU4/global_ccu4_extern.h \
+ ../Dave/Generated/ANALOG_IO/analog_io.h \
+ ../Dave/Generated/ANALOG_IO/analog_io_conf.h \
+ ../Dave/Generated/ANALOG_IO/analog_io_extern.h \
+ ../Dave/Generated/DAC/dac.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_dac.h \
+ ../Dave/Generated/DAC/dac_conf.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h \
+ ../Dave/Generated/DAC/dac_extern.h ../Dave/Generated/DAC/dac.h
 
 ../Dave/Generated/DAVE.h:
 
@@ -134,3 +142,21 @@ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCL
 ../Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.h:
 
 ../Dave/Generated/GLOBAL_CCU4/global_ccu4_extern.h:
+
+../Dave/Generated/ANALOG_IO/analog_io.h:
+
+../Dave/Generated/ANALOG_IO/analog_io_conf.h:
+
+../Dave/Generated/ANALOG_IO/analog_io_extern.h:
+
+../Dave/Generated/DAC/dac.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_dac.h:
+
+../Dave/Generated/DAC/dac_conf.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h:
+
+../Dave/Generated/DAC/dac_extern.h:
+
+../Dave/Generated/DAC/dac.h:

@@ -46,6 +46,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="TRIGSEL" URI="http://resources/0.1.29/peripheral/dac/0/dac1cfg1/trigsel" value="0" toolTipHelpDescription="Selects one of the eight external trigger sources for DAC1:" defaultValue="0" startPos="12" stopPos="14" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="0" URI="http://resources/0.1.29/peripheral/dac/0/slice/0">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DAC/v4_0_18/DAC_0.app#//@hwResources.0"/>
     <resourcesList name="cfg0" requiredResourceUri="http://resources/0.1.29/peripheral/dac/0/dac0cfg0"/>
     <resourcesList name="cfg1" requiredResourceUri="http://resources/0.1.29/peripheral/dac/0/dac0cfg1"/>
     <resourcesList name="cfg1_trigsel" requiredResourceUri="http://resources/0.1.29/peripheral/dac/0/dac0cfg1/trigsel"/>

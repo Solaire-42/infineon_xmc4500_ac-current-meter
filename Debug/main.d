@@ -44,6 +44,15 @@ main.o main.d main.o: ../main.c \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_ccu4_map.h \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.h \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/GLOBAL_CCU4/global_ccu4_extern.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_conf.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_extern.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_dac.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac_conf.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac_extern.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac.h \
  ../SSD1306/ssd1306.h ../SSD1306/ssd1306_conf.h \
  ../SSD1306/ssd1306_fonts.h \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_usic.h \
@@ -138,6 +147,24 @@ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCL
 C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/GLOBAL_CCU4/global_ccu4_conf.h:
 
 C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/GLOBAL_CCU4/global_ccu4_extern.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_conf.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_extern.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_dac.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac_conf.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac_extern.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac.h:
 
 ../SSD1306/ssd1306.h:
 

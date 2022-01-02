@@ -20,8 +20,10 @@ TOOLCHAIN_ROOT :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Dave/Generated/ADC_MEASUREMENT \
+Dave/Generated/ANALOG_IO \
 Dave/Generated/CLOCK_XMC4 \
 Dave/Generated/CPU_CTRL_XMC4 \
+Dave/Generated/DAC \
 Dave/Generated \
 Dave/Generated/GLOBAL_ADC \
 Dave/Generated/GLOBAL_CCU4 \

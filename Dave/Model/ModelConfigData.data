@@ -54,12 +54,20 @@
   <nodes xsi:type="ApplicationModel:PeripheralNode">
     <resource xsi:type="ResourceModel:Peripheral" href="HW_RESOURCES/CCU43/CCU43_3.dd#/"/>
   </nodes>
+  <nodes xsi:type="ApplicationModel:AppNode">
+    <resource xsi:type="ResourceModel:App" href="APPS/DAC/v4_0_18/DAC_0.app#/"/>
+  </nodes>
+  <nodes xsi:type="ApplicationModel:AppNode">
+    <resource xsi:type="ResourceModel:App" href="APPS/ANALOG_IO/v4_0_12/ANALOG_IO_0.app#/"/>
+  </nodes>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.0"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.10" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.11" target="//@nodes.10"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.16" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.11" target="//@nodes.0"/>
+  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.18" target="//@nodes.1"/>
+  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.18" target="//@nodes.19"/>
   <hwConnections href="APPS/CPU_CTRL_XMC4/v4_0_18/CPU_CTRL_XMC4_0.app#//@connections.7"/>
   <hwConnections href="APPS/CPU_CTRL_XMC4/v4_0_18/CPU_CTRL_XMC4_0.app#//@connections.8"/>
   <hwConnections href="APPS/CPU_CTRL_XMC4/v4_0_18/CPU_CTRL_XMC4_0.app#//@connections.9"/>
@@ -146,4 +154,10 @@
   <hwConnections href="APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@connections.106"/>
   <hwConnections href="APPS/GLOBAL_CCU4/v4_1_14/GLOBAL_CCU4_0.app#//@connections.0"/>
   <hwConnections href="APPS/ADC_MEASUREMENT/v4_1_24/ADC_MEASUREMENT_0.app#//@connections.52"/>
+  <hwConnections href="APPS/DAC/v4_0_18/DAC_0.app#//@connections.2"/>
+  <hwConnections href="APPS/DAC/v4_0_18/DAC_0.app#//@connections.3"/>
+  <hwConnections href="APPS/ANALOG_IO/v4_0_12/ANALOG_IO_0.app#//@connections.0"/>
+  <hwConnections href="APPS/ANALOG_IO/v4_0_12/ANALOG_IO_0.app#//@connections.1"/>
+  <hwConnections href="APPS/DAC/v4_0_18/DAC_0.app#//@connections.1"/>
+  <hwConnections href="APPS/DAC/v4_0_18/DAC_0.app#//@connections.4"/>
 </ApplicationModel:ApplicationData>

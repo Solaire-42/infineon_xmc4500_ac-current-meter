@@ -83,9 +83,16 @@ int main(void)
 
 	//ADC VARIABLES
 	float adc;
+	float voltage_measured;
 	float voltage;
 	float current;
 	float power;
+
+	//CALIBRATION FACTOR (measured on the real system)
+	float calibration_factor = 0.3622;
+
+	//CURRENT TRANSFORMER RATIO
+	float sensor_ratio = 10;
 
 	//OPEN COMMUNICATION WITH I2C
 	SysTick_Config(SystemCoreClock / 1000);
@@ -97,8 +104,9 @@ int main(void)
 		adc = result;
 
 		//CALCULATE
-		voltage = adc * (3.3/4096.0);
-		current = voltage * 10;
+		voltage_measured = adc * (3.3/4096.0);
+		voltage = voltage_measured * calibration_factor;
+		current = voltage * sensor_ratio;
 		power = current * 230;
 		//Smoothing the measurement and compensating environmental influences
 		if(voltage <= 0.03){
@@ -118,5 +126,9 @@ int main(void)
 
 		//DISPLAY THE STRING'S
 		ssd1306_text(voltage_str, current_str, power_str);
+
+		//DAC FROM 0.3V TO 2.5V
+		uint16_t power_out = power;
+		DAC_SingleValue_SetValue_u16(&DAC_0, power_out);
 	}
 }
