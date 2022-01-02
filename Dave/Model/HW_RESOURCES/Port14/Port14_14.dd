@@ -134,6 +134,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b1" description="Pad is disabled, ADC 0 analog input 0 selected."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P14.8 / #37" URI="http://resources/0.1.40/port/p/14/pad/8">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/ANALOG_IO/v4_0_12/ANALOG_IO_0.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.40/port/p/14/out/p8"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.40/port/p/14/omr/ps8"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.40/port/p/14/omr/pr8"/>

@@ -14,7 +14,14 @@ Dave/Generated/DAC/dac.o \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_scu.h \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_scu.h \
  C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAVE_Common.h \
- ../Dave/Generated/DAC/dac_conf.h ../Dave/Generated/DAC/dac_extern.h
+ ../Dave/Generated/DAC/dac_conf.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_gpio.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_gpio.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_gpio_map.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_conf.h \
+ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_extern.h \
+ ../Dave/Generated/DAC/dac_extern.h
 
 ../Dave/Generated/DAC/dac.h:
 
@@ -45,5 +52,17 @@ C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCL
 C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAVE_Common.h:
 
 ../Dave/Generated/DAC/dac_conf.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_gpio.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_gpio.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_gpio_map.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_conf.h:
+
+C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io_extern.h:
 
 ../Dave/Generated/DAC/dac_extern.h:

@@ -2198,7 +2198,7 @@
  166              	 .thumb
  167              	 .thumb_func
  169              	VADC0_C0_2_IRQHandler:
- 170              	.LFB453:
+ 170              	.LFB492:
  171              	 .file 2 "../main.c"
    1:../main.c     **** /*
    2:../main.c     ****  * main.c
@@ -2276,7 +2276,7 @@
  204 0024 00000000 	 .word result
  205 0028 00000000 	 .word ADC_MEASUREMENT_0
  206              	 .cfi_endproc
- 207              	.LFE453:
+ 207              	.LFE492:
  209              	 .global SysTickCnt
  210              	 .section .bss.SysTickCnt,"aw",%nobits
  211              	 .align 2
@@ -2288,7 +2288,7 @@
  219              	 .thumb
  220              	 .thumb_func
  222              	SysTick_Handler:
- 223              	.LFB454:
+ 223              	.LFB493:
   42:../main.c     **** 
   43:../main.c     **** //DISPLAY
   44:../main.c     **** uint32_t SysTickCnt = 0;
@@ -2328,14 +2328,14 @@
  254              	.L16:
  255 0018 00000000 	 .word SysTickCnt
  256              	 .cfi_endproc
- 257              	.LFE454:
+ 257              	.LFE493:
  259              	 .section .text.delay_ms,"ax",%progbits
  260              	 .align 2
  261              	 .global delay_ms
  262              	 .thumb
  263              	 .thumb_func
  265              	delay_ms:
- 266              	.LFB455:
+ 266              	.LFB494:
   48:../main.c     **** 
   49:../main.c     **** void delay_ms(uint32_t ms) {
  267              	 .loc 2 49 0
@@ -2396,14 +2396,14 @@
  319              	.L21:
  320 002c 00000000 	 .word SysTickCnt
  321              	 .cfi_endproc
- 322              	.LFE455:
+ 322              	.LFE494:
  324              	 .section .text.ssd1306_text,"ax",%progbits
  325              	 .align 2
  326              	 .global ssd1306_text
  327              	 .thumb
  328              	 .thumb_func
  330              	ssd1306_text:
- 331              	.LFB456:
+ 331              	.LFB495:
   53:../main.c     **** 
   54:../main.c     **** //WRITE STRING ON DISPLAY
   55:../main.c     **** void ssd1306_text(char *data1, char *data2, char *data3){
@@ -2483,7 +2483,7 @@
  396              	.L24:
  397 0060 00000000 	 .word Font_6x8
  398              	 .cfi_endproc
- 399              	.LFE456:
+ 399              	.LFE495:
  401              	 .section .rodata
  402              	 .align 2
  403              	.LC0:
@@ -2505,7 +2505,7 @@
  416              	 .thumb
  417              	 .thumb_func
  419              	float2string:
- 420              	.LFB457:
+ 420              	.LFB496:
   65:../main.c     **** 
   66:../main.c     **** void float2string(float value, char *variable, char *unit, char *str){
  421              	 .loc 2 66 0
@@ -2624,7 +2624,7 @@
  524 00bc 04000000 	 .word .LC1
  525 00c0 08000000 	 .word .LC2
  526              	 .cfi_endproc
- 527              	.LFE457:
+ 527              	.LFE496:
  529              	 .global __aeabi_dmul
  530              	 .global __aeabi_d2f
  531              	 .global __aeabi_dcmple
@@ -2658,7 +2658,7 @@
  554              	 .thumb
  555              	 .thumb_func
  557              	main:
- 558              	.LFB458:
+ 558              	.LFB497:
   77:../main.c     **** 
   78:../main.c     **** 
   79:../main.c     **** int main(void)
@@ -2672,9 +2672,9 @@
  565              	 .cfi_def_cfa_offset 8
  566              	 .cfi_offset 7,-8
  567              	 .cfi_offset 14,-4
- 568 0002 D0B0     	 sub sp,sp,#320
+ 568 0002 D6B0     	 sub sp,sp,#344
  569              	.LCFI34:
- 570              	 .cfi_def_cfa_offset 328
+ 570              	 .cfi_def_cfa_offset 352
  571 0004 00AF     	 add r7,sp,#0
  572              	.LCFI35:
  573              	 .cfi_def_cfa_register 7
@@ -2685,179 +2685,221 @@
   83:../main.c     **** 
   84:../main.c     **** 	//ADC VARIABLES
   85:../main.c     **** 	float adc;
-  86:../main.c     **** 	float voltage;
-  87:../main.c     **** 	float current;
-  88:../main.c     **** 	float power;
-  89:../main.c     **** 
-  90:../main.c     **** 	//OPEN COMMUNICATION WITH I2C
-  91:../main.c     **** 	SysTick_Config(SystemCoreClock / 1000);
- 576              	 .loc 2 91 0
- 577 000a 3F4B     	 ldr r3,.L44+16
- 578 000c 1B68     	 ldr r3,[r3]
- 579 000e 3F4A     	 ldr r2,.L44+20
- 580 0010 A2FB0323 	 umull r2,r3,r2,r3
- 581 0014 9B09     	 lsrs r3,r3,#6
- 582 0016 1846     	 mov r0,r3
- 583 0018 FFF7FEFF 	 bl SysTick_Config
-  92:../main.c     **** 	ssd1306_Init(I2C_MASTER_0.channel, &delay_ms);
- 584              	 .loc 2 92 0
- 585 001c 3C4B     	 ldr r3,.L44+24
- 586 001e 1B68     	 ldr r3,[r3]
- 587 0020 1846     	 mov r0,r3
- 588 0022 3C49     	 ldr r1,.L44+28
- 589 0024 FFF7FEFF 	 bl ssd1306_Init
- 590              	.L42:
- 591              	.LBB2:
+  86:../main.c     **** 	float voltage_measured;
+  87:../main.c     **** 	float voltage;
+  88:../main.c     **** 	float current;
+  89:../main.c     **** 	float power;
+  90:../main.c     **** 
+  91:../main.c     **** 	//CALIBRATION FACTOR (measured on the real system)
+  92:../main.c     **** 	float calibration_factor = 0.3622;
+ 576              	 .loc 2 92 0
+ 577 000a 4F4B     	 ldr r3,.L44+16
+ 578 000c C7F84C31 	 str r3,[r7,#332]
   93:../main.c     **** 
-  94:../main.c     **** 	while(1)
-  95:../main.c     **** 	{
-  96:../main.c     **** 		//GET RESULT FROM ADC
-  97:../main.c     **** 		adc = result;
- 592              	 .loc 2 97 0
- 593 0028 3B4B     	 ldr r3,.L44+32
- 594 002a 1B88     	 ldrh r3,[r3]
- 595 002c 07EE903A 	 fmsr s15,r3
- 596 0030 F8EE677A 	 fuitos s15,s15
- 597 0034 C7ED4D7A 	 fsts s15,[r7,#308]
-  98:../main.c     **** 
-  99:../main.c     **** 		//CALCULATE
- 100:../main.c     **** 		voltage = adc * (3.3/4096.0);
- 598              	 .loc 2 100 0
- 599 0038 D7F83401 	 ldr r0,[r7,#308]
- 600 003c FFF7FEFF 	 bl __aeabi_f2d
- 601 0040 0246     	 mov r2,r0
- 602 0042 0B46     	 mov r3,r1
- 603 0044 1046     	 mov r0,r2
- 604 0046 1946     	 mov r1,r3
- 605 0048 2BA3     	 adr r3,.L44
- 606 004a D3E90023 	 ldrd r2,[r3]
- 607 004e FFF7FEFF 	 bl __aeabi_dmul
- 608 0052 0246     	 mov r2,r0
- 609 0054 0B46     	 mov r3,r1
- 610 0056 1046     	 mov r0,r2
- 611 0058 1946     	 mov r1,r3
- 612 005a FFF7FEFF 	 bl __aeabi_d2f
- 613 005e 0346     	 mov r3,r0
- 614 0060 C7F83031 	 str r3,[r7,#304]
- 101:../main.c     **** 		current = voltage * 10;
- 615              	 .loc 2 101 0
- 616 0064 D7ED4C7A 	 flds s15,[r7,#304]
- 617 0068 B2EE047A 	 fconsts s14,#36
- 618 006c 67EE877A 	 fmuls s15,s15,s14
- 619 0070 C7ED4F7A 	 fsts s15,[r7,#316]
- 102:../main.c     **** 		power = current * 230;
- 620              	 .loc 2 102 0
- 621 0074 D7ED4F7A 	 flds s15,[r7,#316]
- 622 0078 9FED287A 	 flds s14,.L44+36
- 623 007c 67EE877A 	 fmuls s15,s15,s14
- 624 0080 C7ED4E7A 	 fsts s15,[r7,#312]
- 103:../main.c     **** 		//Smoothing the measurement and compensating environmental influences
- 104:../main.c     **** 		if(voltage <= 0.03){
- 625              	 .loc 2 104 0
- 626 0084 D7F83001 	 ldr r0,[r7,#304]
- 627 0088 FFF7FEFF 	 bl __aeabi_f2d
- 628 008c 0246     	 mov r2,r0
- 629 008e 0B46     	 mov r3,r1
- 630 0090 1046     	 mov r0,r2
- 631 0092 1946     	 mov r1,r3
- 632 0094 1AA3     	 adr r3,.L44+8
- 633 0096 D3E90023 	 ldrd r2,[r3]
- 634 009a FFF7FEFF 	 bl __aeabi_dcmple
- 635 009e 0346     	 mov r3,r0
- 636 00a0 002B     	 cmp r3,#0
- 637 00a2 07D0     	 beq .L40
- 105:../main.c     **** 			current = 0;
- 638              	 .loc 2 105 0
- 639 00a4 4FF00003 	 mov r3,#0
- 640 00a8 C7F83C31 	 str r3,[r7,#316]
- 106:../main.c     **** 			power = 0;
- 641              	 .loc 2 106 0
- 642 00ac 4FF00003 	 mov r3,#0
- 643 00b0 C7F83831 	 str r3,[r7,#312]
- 644              	.L40:
- 107:../main.c     **** 		}
- 108:../main.c     **** 
- 109:../main.c     **** 		//VOLTAGE STRING
- 110:../main.c     **** 		char voltage_str [100];
- 111:../main.c     **** 		float2string(voltage, "Voltage:", "V", voltage_str);
- 645              	 .loc 2 111 0
- 646 00b4 3B1D     	 adds r3,r7,#4
- 647 00b6 D7F83001 	 ldr r0,[r7,#304]
- 648 00ba 1949     	 ldr r1,.L44+40
- 649 00bc 194A     	 ldr r2,.L44+44
- 650 00be FFF7FEFF 	 bl float2string
- 112:../main.c     **** 		//CURRENT STRING
- 113:../main.c     **** 		char current_str [100];
- 114:../main.c     **** 		float2string(current, "Current:", "A", current_str);
- 651              	 .loc 2 114 0
- 652 00c2 07F16803 	 add r3,r7,#104
- 653 00c6 D7F83C01 	 ldr r0,[r7,#316]
- 654 00ca 1749     	 ldr r1,.L44+48
- 655 00cc 174A     	 ldr r2,.L44+52
- 656 00ce FFF7FEFF 	 bl float2string
- 115:../main.c     **** 		//POWER STRING
- 116:../main.c     **** 		char power_str [100];
- 117:../main.c     **** 		float2string(power, "Power:", "W", power_str);
- 657              	 .loc 2 117 0
- 658 00d2 07F1CC03 	 add r3,r7,#204
- 659 00d6 D7F83801 	 ldr r0,[r7,#312]
- 660 00da 1549     	 ldr r1,.L44+56
- 661 00dc 154A     	 ldr r2,.L44+60
- 662 00de FFF7FEFF 	 bl float2string
- 118:../main.c     **** 
- 119:../main.c     **** 		//DISPLAY THE STRING'S
- 120:../main.c     **** 		ssd1306_text(voltage_str, current_str, power_str);
- 663              	 .loc 2 120 0
- 664 00e2 391D     	 adds r1,r7,#4
- 665 00e4 07F16802 	 add r2,r7,#104
- 666 00e8 07F1CC03 	 add r3,r7,#204
- 667 00ec 0846     	 mov r0,r1
- 668 00ee 1146     	 mov r1,r2
- 669 00f0 1A46     	 mov r2,r3
- 670 00f2 FFF7FEFF 	 bl ssd1306_text
- 671              	.LBE2:
- 121:../main.c     **** 	}
- 672              	 .loc 2 121 0
- 673 00f6 97E7     	 b .L42
- 674              	.L45:
- 675              	 .align 3
- 676              	.L44:
- 677 00f8 66666666 	 .word 1717986918
- 678 00fc 66664A3F 	 .word 1061840486
- 679 0100 B81E85EB 	 .word -343597384
- 680 0104 51B89E3F 	 .word 1067366481
- 681 0108 00000000 	 .word SystemCoreClock
- 682 010c D34D6210 	 .word 274877907
- 683 0110 00000000 	 .word I2C_MASTER_0
- 684 0114 00000000 	 .word delay_ms
- 685 0118 00000000 	 .word result
- 686 011c 00006643 	 .word 1130758144
- 687 0120 18000000 	 .word .LC3
- 688 0124 24000000 	 .word .LC4
- 689 0128 28000000 	 .word .LC5
- 690 012c 34000000 	 .word .LC6
- 691 0130 38000000 	 .word .LC7
- 692 0134 40000000 	 .word .LC8
- 693              	 .cfi_endproc
- 694              	.LFE458:
- 696              	 .text
- 697              	.Letext0:
- 698              	 .file 3 "c:\\infineon\\tools\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
- 699              	 .file 4 "c:\\infineon\\tools\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 700              	 .file 5 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
- 701              	 .file 6 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_usic.h"
- 702              	 .file 7 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_i2c.h"
- 703              	 .file 8 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/I2C_MASTER/i2c_master.h"
- 704              	 .file 9 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_vadc.h"
- 705              	 .file 10 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/GLOBAL_ADC/global_adc.h"
- 706              	 .file 11 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ADC_MEASUREMENT/adc_measurement.h"
- 707              	 .file 12 "../SSD1306/ssd1306_fonts.h"
- 708              	 .file 13 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_spi.h"
- 709              	 .file 14 "../SSD1306/ssd1306.h"
- 710              	 .file 15 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Include/cmsis_gcc.h"
- 711              	 .file 16 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
- 712              	 .file 17 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/I2C_MASTER/i2c_master_extern.h"
- 713              	 .file 18 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ADC_MEASUREMENT/adc_measurement_extern.h"
+  94:../main.c     **** 	//CURRENT TRANSFORMER RATIO
+  95:../main.c     **** 	float sensor_ratio = 10;
+ 579              	 .loc 2 95 0
+ 580 0010 4E4B     	 ldr r3,.L44+20
+ 581 0012 C7F84831 	 str r3,[r7,#328]
+  96:../main.c     **** 
+  97:../main.c     **** 	//OPEN COMMUNICATION WITH I2C
+  98:../main.c     **** 	SysTick_Config(SystemCoreClock / 1000);
+ 582              	 .loc 2 98 0
+ 583 0016 4E4B     	 ldr r3,.L44+24
+ 584 0018 1B68     	 ldr r3,[r3]
+ 585 001a 4E4A     	 ldr r2,.L44+28
+ 586 001c A2FB0323 	 umull r2,r3,r2,r3
+ 587 0020 9B09     	 lsrs r3,r3,#6
+ 588 0022 1846     	 mov r0,r3
+ 589 0024 FFF7FEFF 	 bl SysTick_Config
+  99:../main.c     **** 	ssd1306_Init(I2C_MASTER_0.channel, &delay_ms);
+ 590              	 .loc 2 99 0
+ 591 0028 4B4B     	 ldr r3,.L44+32
+ 592 002a 1B68     	 ldr r3,[r3]
+ 593 002c 1846     	 mov r0,r3
+ 594 002e 4B49     	 ldr r1,.L44+36
+ 595 0030 FFF7FEFF 	 bl ssd1306_Init
+ 596              	.L42:
+ 597              	.LBB2:
+ 100:../main.c     **** 
+ 101:../main.c     **** 	while(1)
+ 102:../main.c     **** 	{
+ 103:../main.c     **** 		//GET RESULT FROM ADC
+ 104:../main.c     **** 		adc = result;
+ 598              	 .loc 2 104 0
+ 599 0034 4A4B     	 ldr r3,.L44+40
+ 600 0036 1B88     	 ldrh r3,[r3]
+ 601 0038 07EE903A 	 fmsr s15,r3
+ 602 003c F8EE677A 	 fuitos s15,s15
+ 603 0040 C7ED517A 	 fsts s15,[r7,#324]
+ 105:../main.c     **** 
+ 106:../main.c     **** 		//CALCULATE
+ 107:../main.c     **** 		voltage_measured = adc * (3.3/4096.0);
+ 604              	 .loc 2 107 0
+ 605 0044 D7F84401 	 ldr r0,[r7,#324]
+ 606 0048 FFF7FEFF 	 bl __aeabi_f2d
+ 607 004c 0246     	 mov r2,r0
+ 608 004e 0B46     	 mov r3,r1
+ 609 0050 1046     	 mov r0,r2
+ 610 0052 1946     	 mov r1,r3
+ 611 0054 38A3     	 adr r3,.L44
+ 612 0056 D3E90023 	 ldrd r2,[r3]
+ 613 005a FFF7FEFF 	 bl __aeabi_dmul
+ 614 005e 0246     	 mov r2,r0
+ 615 0060 0B46     	 mov r3,r1
+ 616 0062 1046     	 mov r0,r2
+ 617 0064 1946     	 mov r1,r3
+ 618 0066 FFF7FEFF 	 bl __aeabi_d2f
+ 619 006a 0346     	 mov r3,r0
+ 620 006c C7F84031 	 str r3,[r7,#320]
+ 108:../main.c     **** 		voltage = voltage_measured * calibration_factor;
+ 621              	 .loc 2 108 0
+ 622 0070 97ED507A 	 flds s14,[r7,#320]
+ 623 0074 D7ED537A 	 flds s15,[r7,#332]
+ 624 0078 67EE277A 	 fmuls s15,s14,s15
+ 625 007c C7ED4F7A 	 fsts s15,[r7,#316]
+ 109:../main.c     **** 		current = voltage * sensor_ratio;
+ 626              	 .loc 2 109 0
+ 627 0080 97ED4F7A 	 flds s14,[r7,#316]
+ 628 0084 D7ED527A 	 flds s15,[r7,#328]
+ 629 0088 67EE277A 	 fmuls s15,s14,s15
+ 630 008c C7ED557A 	 fsts s15,[r7,#340]
+ 110:../main.c     **** 		power = current * 230;
+ 631              	 .loc 2 110 0
+ 632 0090 D7ED557A 	 flds s15,[r7,#340]
+ 633 0094 9FED337A 	 flds s14,.L44+44
+ 634 0098 67EE877A 	 fmuls s15,s15,s14
+ 635 009c C7ED547A 	 fsts s15,[r7,#336]
+ 111:../main.c     **** 		//Smoothing the measurement and compensating environmental influences
+ 112:../main.c     **** 		if(voltage <= 0.03){
+ 636              	 .loc 2 112 0
+ 637 00a0 D7F83C01 	 ldr r0,[r7,#316]
+ 638 00a4 FFF7FEFF 	 bl __aeabi_f2d
+ 639 00a8 0246     	 mov r2,r0
+ 640 00aa 0B46     	 mov r3,r1
+ 641 00ac 1046     	 mov r0,r2
+ 642 00ae 1946     	 mov r1,r3
+ 643 00b0 23A3     	 adr r3,.L44+8
+ 644 00b2 D3E90023 	 ldrd r2,[r3]
+ 645 00b6 FFF7FEFF 	 bl __aeabi_dcmple
+ 646 00ba 0346     	 mov r3,r0
+ 647 00bc 002B     	 cmp r3,#0
+ 648 00be 07D0     	 beq .L40
+ 113:../main.c     **** 			current = 0;
+ 649              	 .loc 2 113 0
+ 650 00c0 4FF00003 	 mov r3,#0
+ 651 00c4 C7F85431 	 str r3,[r7,#340]
+ 114:../main.c     **** 			power = 0;
+ 652              	 .loc 2 114 0
+ 653 00c8 4FF00003 	 mov r3,#0
+ 654 00cc C7F85031 	 str r3,[r7,#336]
+ 655              	.L40:
+ 115:../main.c     **** 		}
+ 116:../main.c     **** 
+ 117:../main.c     **** 		//VOLTAGE STRING
+ 118:../main.c     **** 		char voltage_str [100];
+ 119:../main.c     **** 		float2string(voltage, "Voltage:", "V", voltage_str);
+ 656              	 .loc 2 119 0
+ 657 00d0 07F10C03 	 add r3,r7,#12
+ 658 00d4 D7F83C01 	 ldr r0,[r7,#316]
+ 659 00d8 2349     	 ldr r1,.L44+48
+ 660 00da 244A     	 ldr r2,.L44+52
+ 661 00dc FFF7FEFF 	 bl float2string
+ 120:../main.c     **** 		//CURRENT STRING
+ 121:../main.c     **** 		char current_str [100];
+ 122:../main.c     **** 		float2string(current, "Current:", "A", current_str);
+ 662              	 .loc 2 122 0
+ 663 00e0 07F17003 	 add r3,r7,#112
+ 664 00e4 D7F85401 	 ldr r0,[r7,#340]
+ 665 00e8 2149     	 ldr r1,.L44+56
+ 666 00ea 224A     	 ldr r2,.L44+60
+ 667 00ec FFF7FEFF 	 bl float2string
+ 123:../main.c     **** 		//POWER STRING
+ 124:../main.c     **** 		char power_str [100];
+ 125:../main.c     **** 		float2string(power, "Power:", "W", power_str);
+ 668              	 .loc 2 125 0
+ 669 00f0 07F1D403 	 add r3,r7,#212
+ 670 00f4 D7F85001 	 ldr r0,[r7,#336]
+ 671 00f8 1F49     	 ldr r1,.L44+64
+ 672 00fa 204A     	 ldr r2,.L44+68
+ 673 00fc FFF7FEFF 	 bl float2string
+ 126:../main.c     **** 
+ 127:../main.c     **** 		//DISPLAY THE STRING'S
+ 128:../main.c     **** 		ssd1306_text(voltage_str, current_str, power_str);
+ 674              	 .loc 2 128 0
+ 675 0100 07F10C01 	 add r1,r7,#12
+ 676 0104 07F17002 	 add r2,r7,#112
+ 677 0108 07F1D403 	 add r3,r7,#212
+ 678 010c 0846     	 mov r0,r1
+ 679 010e 1146     	 mov r1,r2
+ 680 0110 1A46     	 mov r2,r3
+ 681 0112 FFF7FEFF 	 bl ssd1306_text
+ 129:../main.c     **** 
+ 130:../main.c     **** 		//DAC FROM 0.3V TO 2.5V
+ 131:../main.c     **** 		uint16_t power_out = power;
+ 682              	 .loc 2 131 0
+ 683 0116 D7ED547A 	 flds s15,[r7,#336]
+ 684 011a FCEEE77A 	 ftouizs s15,s15
+ 685 011e C7ED017A 	 fsts s15,[r7,#4]
+ 686 0122 BB88     	 ldrh r3,[r7,#4]
+ 687 0124 A7F83A31 	 strh r3,[r7,#314]
+ 132:../main.c     **** 		DAC_SingleValue_SetValue_u16(&DAC_0, power_out);
+ 688              	 .loc 2 132 0
+ 689 0128 B7F83A31 	 ldrh r3,[r7,#314]
+ 690 012c 1448     	 ldr r0,.L44+72
+ 691 012e 1946     	 mov r1,r3
+ 692 0130 FFF7FEFF 	 bl DAC_SingleValue_SetValue_u16
+ 693              	.LBE2:
+ 133:../main.c     **** 	}
+ 694              	 .loc 2 133 0
+ 695 0134 7EE7     	 b .L42
+ 696              	.L45:
+ 697 0136 00BF     	 .align 3
+ 698              	.L44:
+ 699 0138 66666666 	 .word 1717986918
+ 700 013c 66664A3F 	 .word 1061840486
+ 701 0140 B81E85EB 	 .word -343597384
+ 702 0144 51B89E3F 	 .word 1067366481
+ 703 0148 4772B93E 	 .word 1052340807
+ 704 014c 00002041 	 .word 1092616192
+ 705 0150 00000000 	 .word SystemCoreClock
+ 706 0154 D34D6210 	 .word 274877907
+ 707 0158 00000000 	 .word I2C_MASTER_0
+ 708 015c 00000000 	 .word delay_ms
+ 709 0160 00000000 	 .word result
+ 710 0164 00006643 	 .word 1130758144
+ 711 0168 18000000 	 .word .LC3
+ 712 016c 24000000 	 .word .LC4
+ 713 0170 28000000 	 .word .LC5
+ 714 0174 34000000 	 .word .LC6
+ 715 0178 38000000 	 .word .LC7
+ 716 017c 40000000 	 .word .LC8
+ 717 0180 00000000 	 .word DAC_0
+ 718              	 .cfi_endproc
+ 719              	.LFE497:
+ 721 0184 AFF30080 	 .text
+ 722              	.Letext0:
+ 723              	 .file 3 "c:\\infineon\\tools\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 724              	 .file 4 "c:\\infineon\\tools\\dave ide\\4.5.0.202105191637\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 725              	 .file 5 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+ 726              	 .file 6 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc4_gpio.h"
+ 727              	 .file 7 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_usic.h"
+ 728              	 .file 8 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_i2c.h"
+ 729              	 .file 9 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/I2C_MASTER/i2c_master.h"
+ 730              	 .file 10 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_vadc.h"
+ 731              	 .file 11 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/GLOBAL_ADC/global_adc.h"
+ 732              	 .file 12 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ADC_MEASUREMENT/adc_measurement.h"
+ 733              	 .file 13 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ANALOG_IO/analog_io.h"
+ 734              	 .file 14 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_dac.h"
+ 735              	 .file 15 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac.h"
+ 736              	 .file 16 "../SSD1306/ssd1306_fonts.h"
+ 737              	 .file 17 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/XMCLib/inc/xmc_spi.h"
+ 738              	 .file 18 "../SSD1306/ssd1306.h"
+ 739              	 .file 19 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Include/cmsis_gcc.h"
+ 740              	 .file 20 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
+ 741              	 .file 21 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/I2C_MASTER/i2c_master_extern.h"
+ 742              	 .file 22 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/ADC_MEASUREMENT/adc_measurement_extern.h"
+ 743              	 .file 23 "C:/Users/fluky/Documents/GitHub/infineon_xmc4500_ac-current-meter/Dave/Generated/DAC/dac_extern.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
     {standard input}:20     .text.__NVIC_SetPriority:00000000 $t
@@ -2887,8 +2929,9 @@ DEFINED SYMBOLS
     {standard input}:523    .text.float2string:000000b8 $d
     {standard input}:552    .text.main:00000000 $t
     {standard input}:557    .text.main:00000000 main
-    {standard input}:677    .text.main:000000f8 $d
+    {standard input}:699    .text.main:00000138 $d
                      .debug_frame:00000010 $d
+    {standard input}:721    .text.main:00000184 $t
 
 UNDEFINED SYMBOLS
 ADC_MEASUREMENT_GetResult
@@ -2909,5 +2952,7 @@ __aeabi_d2f
 __aeabi_dcmple
 DAVE_Init
 ssd1306_Init
+DAC_SingleValue_SetValue_u16
 SystemCoreClock
 I2C_MASTER_0
+DAC_0
