@@ -2045,11 +2045,8 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
  .data          0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
  .bss           0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
- .text          0x00000000      0x110 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
  .data          0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
  .bss           0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
- .ARM.attributes
-                0x00000000       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
  .data          0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
  .bss           0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
  .data          0x00000000        0x0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
@@ -2202,7 +2199,7 @@ END GROUP
                 0x00000800                stack_size = DEFINED (stack_size)?stack_size:0x800
                 0x00000040                no_init_size = 0x40
 
-.text           0x08000000     0x52d4 load address 0x0c000000
+.text           0x08000000     0x541c load address 0x0c000000
                 0x08000000                sText = .
  *(.reset)
  .reset         0x08000000      0x2b4 ./Startup/startup_XMC4500.o
@@ -2756,82 +2753,99 @@ END GROUP
                 0x080037ec       0x64 ./main.o
                 0x080037ec                ssd1306_text
  .text.float2string
-                0x08003850       0xc8 ./main.o
+                0x08003850       0xc4 ./main.o
                 0x08003850                float2string
- .text.main     0x08003918      0x100 ./main.o
+ *fill*         0x08003914        0x4 
+ .text.main     0x08003918      0x138 ./main.o
                 0x08003918                main
- .text.trunc    0x08003a18       0x60 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_trunc.o)
-                0x08003a18                trunc
- .text          0x08003a78      0x370 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
-                0x08003a78                __aeabi_drsub
-                0x08003a80                __aeabi_dsub
-                0x08003a80                __subdf3
-                0x08003a84                __aeabi_dadd
-                0x08003a84                __adddf3
-                0x08003cfc                __floatunsidf
-                0x08003cfc                __aeabi_ui2d
-                0x08003d1c                __floatsidf
-                0x08003d1c                __aeabi_i2d
-                0x08003d40                __aeabi_f2d
-                0x08003d40                __extendsfdf2
-                0x08003d7c                __floatundidf
-                0x08003d7c                __aeabi_ul2d
-                0x08003d8c                __floatdidf
-                0x08003d8c                __aeabi_l2d
- .text          0x08003de8      0x424 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
-                0x08003de8                __aeabi_dmul
-                0x08003de8                __muldf3
-                0x0800403c                __divdf3
-                0x0800403c                __aeabi_ddiv
- .text          0x0800420c       0x50 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
-                0x0800420c                __aeabi_d2iz
-                0x0800420c                __fixdfsi
- .text          0x0800425c       0xa0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
-                0x0800425c                __truncdfsf2
-                0x0800425c                __aeabi_d2f
- .text.__errno  0x080042fc        0xc c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-errno.o)
-                0x080042fc                __errno
+ .text.trunc    0x08003a50       0x60 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_trunc.o)
+                0x08003a50                trunc
+ .text          0x08003ab0      0x370 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
+                0x08003ab0                __aeabi_drsub
+                0x08003ab8                __aeabi_dsub
+                0x08003ab8                __subdf3
+                0x08003abc                __aeabi_dadd
+                0x08003abc                __adddf3
+                0x08003d34                __floatunsidf
+                0x08003d34                __aeabi_ui2d
+                0x08003d54                __floatsidf
+                0x08003d54                __aeabi_i2d
+                0x08003d78                __aeabi_f2d
+                0x08003d78                __extendsfdf2
+                0x08003db4                __floatundidf
+                0x08003db4                __aeabi_ul2d
+                0x08003dc4                __floatdidf
+                0x08003dc4                __aeabi_l2d
+ .text          0x08003e20      0x424 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
+                0x08003e20                __aeabi_dmul
+                0x08003e20                __muldf3
+                0x08004074                __divdf3
+                0x08004074                __aeabi_ddiv
+ .text          0x08004244      0x110 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
+                0x08004244                __gtdf2
+                0x08004244                __gedf2
+                0x0800424c                __ltdf2
+                0x0800424c                __ledf2
+                0x08004254                __nedf2
+                0x08004254                __eqdf2
+                0x08004254                __cmpdf2
+                0x080042d0                __aeabi_cdrcmple
+                0x080042e0                __aeabi_cdcmpeq
+                0x080042e0                __aeabi_cdcmple
+                0x080042f0                __aeabi_dcmpeq
+                0x08004304                __aeabi_dcmplt
+                0x08004318                __aeabi_dcmple
+                0x0800432c                __aeabi_dcmpge
+                0x08004340                __aeabi_dcmpgt
+ .text          0x08004354       0x50 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
+                0x08004354                __aeabi_d2iz
+                0x08004354                __fixdfsi
+ .text          0x080043a4       0xa0 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
+                0x080043a4                __truncdfsf2
+                0x080043a4                __aeabi_d2f
+ .text.__errno  0x08004444        0xc c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-errno.o)
+                0x08004444                __errno
  .text.__libc_init_array
-                0x08004308       0x4c c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
-                0x08004308                __libc_init_array
- .text.memcpy   0x08004354       0x16 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
-                0x08004354                memcpy
- *fill*         0x0800436a        0x2 
- .text.sprintf  0x0800436c       0x48 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sprintf.o)
-                0x0800436c                siprintf
-                0x0800436c                sprintf
+                0x08004450       0x4c c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x08004450                __libc_init_array
+ .text.memcpy   0x0800449c       0x16 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+                0x0800449c                memcpy
+ *fill*         0x080044b2        0x2 
+ .text.sprintf  0x080044b4       0x48 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sprintf.o)
+                0x080044b4                siprintf
+                0x080044b4                sprintf
  .text.__ssputs_r
-                0x080043b4       0xb2 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x080043b4                __ssputs_r
- *fill*         0x08004466        0x2 
+                0x080044fc       0xb2 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x080044fc                __ssputs_r
+ *fill*         0x080045ae        0x2 
  .text._svfprintf_r
-                0x08004468      0x1e4 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x08004468                _svfiprintf_r
-                0x08004468                _svfprintf_r
+                0x080045b0      0x1e4 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x080045b0                _svfiprintf_r
+                0x080045b0                _svfprintf_r
  .text._printf_common
-                0x0800464c       0xea c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0800464c                _printf_common
- *fill*         0x08004736        0x2 
+                0x08004794       0xea c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08004794                _printf_common
+ *fill*         0x0800487e        0x2 
  .text._printf_i
-                0x08004738      0x234 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x08004738                _printf_i
- .text.memchr   0x0800496c       0x1e c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memchr.o)
-                0x0800496c                memchr
- .text.memmove  0x0800498a       0x36 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
-                0x0800498a                memmove
- .text._free_r  0x080049c0       0x88 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-freer.o)
-                0x080049c0                _free_r
+                0x08004880      0x234 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08004880                _printf_i
+ .text.memchr   0x08004ab4       0x1e c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memchr.o)
+                0x08004ab4                memchr
+ .text.memmove  0x08004ad2       0x36 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
+                0x08004ad2                memmove
+ .text._free_r  0x08004b08       0x88 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-freer.o)
+                0x08004b08                _free_r
  .text._malloc_r
-                0x08004a48       0xac c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x08004a48                _malloc_r
+                0x08004b90       0xac c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x08004b90                _malloc_r
  .text._realloc_r
-                0x08004af4       0x4c c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-reallocr.o)
-                0x08004af4                _realloc_r
- .text._sbrk_r  0x08004b40       0x20 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sbrkr.o)
-                0x08004b40                _sbrk_r
+                0x08004c3c       0x4c c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-reallocr.o)
+                0x08004c3c                _realloc_r
+ .text._sbrk_r  0x08004c88       0x20 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sbrkr.o)
+                0x08004c88                _sbrk_r
  .text._malloc_usable_size_r
-                0x08004b60       0x14 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-msizer.o)
-                0x08004b60                _malloc_usable_size_r
+                0x08004ca8       0x14 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-msizer.o)
+                0x08004ca8                _malloc_usable_size_r
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -2846,72 +2860,72 @@ END GROUP
  *(.dtors)
  *(.rodata .rodata.*)
  .rodata.Font6x8
-                0x08004b74      0x5f0 ./SSD1306/ssd1306_fonts.o
+                0x08004cbc      0x5f0 ./SSD1306/ssd1306_fonts.o
  .rodata.g_xmc_vadc_group_array
-                0x08005164       0x10 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x080052ac       0x10 ./Libraries/XMCLib/src/xmc_vadc.o
  .rodata.I2C_MASTER_0_sda_pin_config
-                0x08005174        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x080052bc        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .rodata.I2C_MASTER_0_scl_pin_config
-                0x08005180        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x080052c8        0xc ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
  .rodata.I2C_MASTER_0_channel_config
-                0x0800518c        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x0800518c                I2C_MASTER_0_channel_config
+                0x080052d4        0x8 ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x080052d4                I2C_MASTER_0_channel_config
  .rodata.I2C_MASTER_0_config
-                0x08005194       0x2c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
-                0x08005194                I2C_MASTER_0_config
+                0x080052dc       0x2c ./Dave/Generated/I2C_MASTER/i2c_master_conf.o
+                0x080052dc                I2C_MASTER_0_config
  .rodata.group_init_handle0
-                0x080051c0       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x080051c0                group_init_handle0
+                0x08005308       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08005308                group_init_handle0
  .rodata.group_init_handle1
-                0x080051d4       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x080051d4                group_init_handle1
+                0x0800531c       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x0800531c                group_init_handle1
  .rodata.group_init_handle2
-                0x080051e8       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x080051e8                group_init_handle2
+                0x08005330       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08005330                group_init_handle2
  .rodata.group_init_handle3
-                0x080051fc       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x080051fc                group_init_handle3
+                0x08005344       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08005344                group_init_handle3
  .rodata.global_config
-                0x08005210       0x18 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x08005210                global_config
- .rodata        0x08005228       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x08005358       0x18 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08005358                global_config
+ .rodata        0x08005370       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  .rodata.global_iclass_config
-                0x0800523c        0x4 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
-                0x0800523c                global_iclass_config
+                0x08005384        0x4 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x08005384                global_iclass_config
  .rodata.backgnd_rs_intr_handle
-                0x08005240        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
-                0x08005240                backgnd_rs_intr_handle
+                0x08005388        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x08005388                backgnd_rs_intr_handle
  .rodata.backgnd_config
-                0x0800524c        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
-                0x0800524c                backgnd_config
- .rodata        0x08005258       0x44 ./main.o
+                0x08005394        0xc ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
+                0x08005394                backgnd_config
+ .rodata        0x080053a0       0x44 ./main.o
  .rodata.str1.1
-                0x0800529c        0x2 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-impure.o)
+                0x080053e4        0x2 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-impure.o)
  .rodata.str1.1
-                0x0800529e       0x11 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x080053e6       0x11 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata.str1.1
-                0x080052af       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x080053f7       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(.gnu.linkonce.r*)
  *(vtable)
-                0x080052d4                . = ALIGN (0x4)
- *fill*         0x080052d1        0x3 
+                0x0800541c                . = ALIGN (0x4)
+ *fill*         0x08005419        0x3 
 
-.glue_7         0x080052d4        0x0 load address 0x0c0052d4
+.glue_7         0x0800541c        0x0 load address 0x0c00541c
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x080052d4        0x0 load address 0x0c0052d4
+.glue_7t        0x0800541c        0x0 load address 0x0c00541c
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x080052d4        0x0 load address 0x0c0052d4
+.vfp11_veneer   0x0800541c        0x0 load address 0x0c00541c
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x080052d4        0x0 load address 0x0c0052d4
+.v4_bx          0x0800541c        0x0 load address 0x0c00541c
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x080052d4        0x0 load address 0x0c0052d4
+.iplt           0x0800541c        0x0 load address 0x0c00541c
  .iplt          0x00000000        0x0 ./Startup/startup_XMC4500.o
 
-.rel.dyn        0x080052d4        0x0 load address 0x0c0052d4
+.rel.dyn        0x0800541c        0x0 load address 0x0c00541c
  .rel.iplt      0x00000000        0x0 ./Startup/startup_XMC4500.o
 
 .eh_frame_hdr
@@ -2922,13 +2936,13 @@ END GROUP
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080052d4                . = ALIGN (0x4)
-                0x080052d4                __exidx_start = .
+                0x0800541c                . = ALIGN (0x4)
+                0x0800541c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x080052d4                __exidx_end = .
-                0x080052d4                . = ALIGN (0x4)
+                0x0800541c                __exidx_end = .
+                0x0800541c                . = ALIGN (0x4)
 
 Stack           0x10000000      0x800
                 0x10000000                __stack_start = .
@@ -2937,25 +2951,25 @@ Stack           0x10000000      0x800
                 0x10000800                __stack_end = .
                 0x10000800                __initial_sp = .
 
-.ram_code       0x10000800        0x0 load address 0x0c0052d4
+.ram_code       0x10000800        0x0 load address 0x0c00541c
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __ram_code_start = .
  *(.ram_code)
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __ram_code_end = .
-                0x0c0052d4                __ram_code_load = LOADADDR (.ram_code)
+                0x0c00541c                __ram_code_load = LOADADDR (.ram_code)
                 0x00000000                __ram_code_size = (__ram_code_end - __ram_code_start)
 
-PSRAM_DATA      0x10000800        0x0 load address 0x0c0052d4
+PSRAM_DATA      0x10000800        0x0 load address 0x0c00541c
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __data3_start = .
  *(PSRAM_DATA)
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __data3_end = .
-                0x0c0052d4                __data3_load = LOADADDR (PSRAM_DATA)
+                0x0c00541c                __data3_load = LOADADDR (PSRAM_DATA)
                 0x00000000                __data3_size = (__data3_end - __data3_start)
 
-PSRAM_BSS       0x10000800        0x0 load address 0x0c0052d4
+PSRAM_BSS       0x10000800        0x0 load address 0x0c00541c
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __bss3_start = .
  *(PSRAM_BSS)
@@ -2965,7 +2979,7 @@ PSRAM_BSS       0x10000800        0x0 load address 0x0c0052d4
                 0x10000800                Heap_Bank3_Start = .
                 0x00000000                __bss3_size = (__bss3_end - __bss3_start)
 
-.data           0x20000000      0x13c load address 0x0c0052d4
+.data           0x20000000      0x13c load address 0x0c00541c
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __data_start = .
  *(.data)
@@ -3032,13 +3046,13 @@ PSRAM_BSS       0x10000800        0x0 load address 0x0c0052d4
                 0x2000013c                PROVIDE (__fini_array_end, .)
                 0x2000013c                . = ALIGN (0x4)
                 0x2000013c                __data_end = .
-                0x0c0052d4                __data_load = LOADADDR (.data)
+                0x0c00541c                __data_load = LOADADDR (.data)
                 0x0000013c                __data_size = (__data_end - __data_start)
 
-.igot.plt       0x2000013c        0x0 load address 0x0c005410
+.igot.plt       0x2000013c        0x0 load address 0x0c005558
  .igot.plt      0x00000000        0x0 ./Startup/startup_XMC4500.o
 
-.bss            0x2000013c      0x23c load address 0x0c005410
+.bss            0x2000013c      0x23c load address 0x0c005558
                 0x2000013c                . = ALIGN (0x4)
                 0x2000013c                __bss_start = .
  *(.bss)
@@ -3085,18 +3099,18 @@ PSRAM_BSS       0x10000800        0x0 load address 0x0c0052d4
                 0x2000ffc0                SystemCoreClock
                 0x2000ffc4                g_chipid
 
-DSRAM2_DATA     0x30000000        0x0 load address 0x0c005410
+DSRAM2_DATA     0x30000000        0x0 load address 0x0c005558
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __data2_start = .
  *(DSRAM2_DATA)
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __data2_end = .
-                0x0c005410                __data2_load = LOADADDR (DSRAM2_DATA)
+                0x0c005558                __data2_load = LOADADDR (DSRAM2_DATA)
                 0x00000000                __data2_size = (__data2_end - __data2_start)
-                0x00005410                __text_size = (((((__exidx_end - sText) + __data_size) + __ram_code_size) + __data2_size) + __data3_size)
-                0x08005410                eText = (sText + __text_size)
+                0x00005558                __text_size = (((((__exidx_end - sText) + __data_size) + __ram_code_size) + __data2_size) + __data3_size)
+                0x08005558                eText = (sText + __text_size)
 
-DSRAM2_BSS      0x30000000        0x0 load address 0x0c005410
+DSRAM2_BSS      0x30000000        0x0 load address 0x0c005558
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __bss2_start = .
  *(ETH_RAM)
@@ -3248,7 +3262,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c005410
  .debug_abbrev  0x000029ab      0x1de ./Dave/Generated/DAVE.o
  .debug_abbrev  0x00002b89      0x2d1 ./main.o
 
-.debug_line     0x00000000     0x6c4a
+.debug_line     0x00000000     0x6c29
  *(.debug_line)
  .debug_line    0x00000000       0x88 ./Startup/startup_XMC4500.o
  .debug_line    0x00000088      0x324 ./Startup/system_XMC4500.o
@@ -3274,7 +3288,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c005410
  .debug_line    0x00005a66      0x51c ./Dave/Generated/ADC_MEASUREMENT/adc_measurement.o
  .debug_line    0x00005f82      0x336 ./Dave/Generated/ADC_MEASUREMENT/adc_measurement_conf.o
  .debug_line    0x000062b8      0x428 ./Dave/Generated/DAVE.o
- .debug_line    0x000066e0      0x56a ./main.o
+ .debug_line    0x000066e0      0x549 ./main.o
 
 .debug_frame    0x00000000     0x4310
  *(.debug_frame)
@@ -3427,7 +3441,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c005410
  *(.debug_varnames)
 
 .build_attributes
-                0x00000000      0x8f5
+                0x00000000      0x917
  *(.ARM.attributes)
  .ARM.attributes
                 0x00000000       0x25 ./Startup/startup_XMC4500.o
@@ -3486,37 +3500,39 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c005410
  .ARM.attributes
                 0x000005a1       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x000005c3       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
+                0x000005c3       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x000005e5       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
+                0x000005e5       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x00000607       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-errno.o)
+                0x00000607       0x22 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
  .ARM.attributes
-                0x00000639       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-impure.o)
+                0x00000629       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x0000066b       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x0000065b       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x0000069d       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+                0x0000068d       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x000006cf       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sprintf.o)
+                0x000006bf       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x00000701       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x000006f1       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sprintf.o)
  .ARM.attributes
-                0x00000733       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000723       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-svfprintf.o)
  .ARM.attributes
-                0x00000765       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memchr.o)
+                0x00000755       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x00000797       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
+                0x00000787       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memchr.o)
  .ARM.attributes
-                0x000007c9       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-freer.o)
+                0x000007b9       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x000007fb       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x000007eb       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x0000082d       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-reallocr.o)
+                0x0000081d       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x0000085f       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sbrkr.o)
+                0x0000084f       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x00000891       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-msizer.o)
+                0x00000881       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x000008c3       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-reent.o)
+                0x000008b3       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x000008e5       0x32 c:/infineon/tools/dave ide/4.5.0.202105191637/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-reent.o)
 OUTPUT(infineon_xmc4500_ac-current-meter.elf elf32-littlearm)
