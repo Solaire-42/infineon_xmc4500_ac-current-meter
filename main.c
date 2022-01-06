@@ -4,7 +4,7 @@
  *  Created on: 2021 Dec 09 13:57:21
  *  Author: fluky
  *
- *  AC CURRENT METER 0 - 20A
+ *  AC CURRENT METER 0-20A
  *  This code reads the voltage output of a current meter with a 12-bit ADC (at pin P14.0).
  *  The measured voltage is then converted (with the conversion 0.1V = 1A) into current and power and everything is shown on the display.
  *  Finally, the measured value is output as an analogue 0 - 3.3V signal at the DAC.
